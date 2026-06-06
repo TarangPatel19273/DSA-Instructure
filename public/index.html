@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DSA Instructor AI - Cosmic Lab</title>
+    <meta name="description" content="Next-generation futuristic DSA Instructor">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Highlight.js for code formatting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark-reasonable.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div class="particles-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <nav class="glass-nav floating-element">
+        <div class="logo">
+            <div class="neon-pulse-ring"></div>
+            <h1><span class="highlight">AI</span>Core::DSA</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-btn" data-hover="Terminal">Terminal</a></li>
+            <li><a href="#chat-section" class="nav-btn" data-hover="Neural Link">Neural Link</a></li>
+            <li><a href="#arena" class="nav-btn" data-hover="Live Arena">Live Arena</a></li>
+            <li><a href="#roadmap" class="nav-btn" data-hover="Galaxy Map">Galaxy Map</a></li>
+        </ul>
+    </nav>
+
+    <main class="app-container">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content" id="hero-content">
+                <h2 class="hologram-text" data-text="MASTER DSA WITH AI">MASTER DSA WITH AI</h2>
+                <div class="typing-container">
+                    <span class="static-text">Initializing Module: </span>
+                    <span id="typing-text" class="glitch-text"></span><span class="cursor">|</span>
+                </div>
+            </div>
+            
+            <div class="hero-nodes">
+                <div class="floating-node node-1 parallax-el" data-speed="0.05">O(log n)</div>
+                <div class="floating-node node-2 parallax-el" data-speed="-0.04">DP</div>
+                <div class="floating-node node-3 parallax-el" data-speed="0.06">Graphs</div>
+                <div class="floating-node node-4 parallax-el" data-speed="-0.03">Trees</div>
+            </div>
+        </section>
+
+        <!-- AI Chat Interface -->
+        <section id="chat-section" class="chat-section">
+            <div class="chat-wrapper glass-panel holographic-border parallax-el" data-speed="0.02">
+                <div class="chat-header">
+                    <div class="status-indicator">
+                        <div class="dot online"></div>
+                        <span>Neural Link: <span class="cyan glow-text">Active</span></span>
+                    </div>
+                    <div class="hex-decoration"></div>
+                </div>
+                
+                <div class="chat-box" id="chat-box">
+                    <div class="message ai-message welcome-message">
+                        <div class="avatar ai-avatar">
+                            <div class="orbiting-rings"></div>
+                            <span class="ai-icon">AI</span>
+                        </div>
+                        <div class="content glass-bubble ai-bubble">
+                            <div class="message-text">System initialized. Awaiting your query...<br><br>I am your supreme AI Instructor. Let us bend the rules of time and space complexity.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-container-wrapper">
+                    <form class="input-area" id="chat-form">
+                        <div class="input-glow"></div>
+                        <input type="text" id="user-input" placeholder="Initiate query... [e.g. How does Dijkstra's algorithm work?]" autocomplete="off" required>
+                        <button type="submit" id="send-btn" title="Execute">
+                            <span class="btn-text">EXEC</span>
+                            <div class="energy-line"></div>
+                        </button>
+                    </form>
+                    <div class="voice-wave hidden" id="voice-wave">
+                        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Sections Placeholders -->
+        <div class="grid-sections">
+            <section id="arena" class="placeholder-section glass-panel parallax-el" data-speed="-0.01">
+                <div class="section-icon">⚔️</div>
+                <h2 class="neon-heading">Live Coding Arena</h2>
+                <p>Compete in zero-gravity algorithmic battles.</p>
+                <div class="hud-box">
+                    <div class="scanline"></div>
+                    COMING SOON
+                </div>
+            </section>
+
+            <section id="roadmap" class="placeholder-section glass-panel parallax-el" data-speed="0.02">
+                <div class="section-icon">🌌</div>
+                <h2 class="neon-heading">Roadmap Galaxy</h2>
+                <p>Explore cosmic paths from Arrays to Segment Trees.</p>
+                <div class="hud-box">
+                    <div class="scanline"></div>
+                    COMING SOON
+                </div>
+            </section>
+            
+            <section id="interview" class="placeholder-section glass-panel parallax-el" data-speed="0.01">
+                <div class="section-icon">🧠</div>
+                <h2 class="neon-heading">Interview Chamber</h2>
+                <p>High-pressure neural simulation for top tech companies.</p>
+                <div class="hud-box">
+                    <div class="scanline"></div>
+                    COMING SOON
+                </div>
+            </section>
+        </div>
+        
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="3d-background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
