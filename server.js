@@ -24,6 +24,7 @@ app.post('/api/ask', async (req, res) => {
             return res.status(400).json({ error: "History array is required." });
         }
 
+        
         const response = await ai.models.generateContent({
             model: "gemini-2.5-flash",
             contents: history,
